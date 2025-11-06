@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+```markdown
+# 📝 React Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Klasik **TodoMVC** yapısına benzer, tamamen **React** ile yazılmış basit bir görev yönetim uygulamasıdır.  
+Kullanıcılar görev ekleyebilir, düzenleyebilir, tamamlayabilir veya silebilir.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Özellikler
 
-### `npm start`
+- 🆕 **Yeni görev ekleme** (Enter tuşuyla)
+- ✅ **Görev tamamlama / geri alma**
+- ✏️ **Çift tıklayarak düzenleme** (Enter ile kaydet, ESC ile iptal)
+- 🗑️ **Görev silme**
+- 🔄 **Tümünü tamamla / tamamlanmamış yap**
+- 🔍 **Filtreleme:** All / Active / Completed
+- 🧹 **Tamamlanan görevleri temizleme**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Proje Yapısı
 
-### `npm test`
+```bash
+src/
+├── App.js          # Ana React bileşeni
+├── index.js        # React DOM render dosyası
+├── index.css       # Stil dosyaları (TodoMVC uyumlu)
+└── ...
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Kurulum Adımları
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1️⃣ Projeyi Klonla
+```bash
+git clone https://github.com/kullanici-adi/todo-app.git
+cd todo-app
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2️⃣ Gerekli Paketleri Kur
+```bash
+npm install
+```
+veya
+```bash
+yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3️⃣ Uygulamayı Başlat
+```bash
+npm start
+```
+veya
+```bash
+yarn start
+```
 
-### `npm run eject`
+Tarayıcıda otomatik olarak şu adres açılacaktır:  
+👉 [http://localhost:3000](http://localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💡 Kullanım Rehberi
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| İşlem | Nasıl Yapılır |
+|--------|----------------|
+| 🧾 Yeni görev ekleme | Input’a yaz → Enter’a bas |
+| ✅ Görev tamamlama | Checkbox’a tıkla |
+| ✏️ Görev düzenleme | Metne çift tıkla |
+| 🗑️ Görev silme | Çöp kutusu ikonuna tıkla |
+| 🔍 Filtreleme | Alt kısımdan All / Active / Completed seç |
+| 🧹 Temizleme | “Clear completed” butonuna tıkla |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🧠 Kullanılan React Özellikleri
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **useState:** Uygulama durumunu yönetmek için.
+- **useEffect:** Gelecekte localStorage veya yan etkiler için.
+- **Conditional Rendering:** Filtreleme ve footer görünümü için.
+- **Event Handling:** onClick, onChange, onKeyDown olaylarını yönetmek için.
+- **Dynamic Class Names:** CSS sınıflarını görev durumuna göre değiştirmek için.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🧩 Geliştirme Notları
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `useEffect` kullanarak görevleri **localStorage** içinde saklayabilirsiniz.
+- Filtre butonlarını `<a>` yerine `<button>` etiketiyle oluşturmak **erişilebilirlik** açısından daha uygundur.
+- Stil dosyasını özelleştirerek kendi **tema renklerinizi** ve **yazı tipinizi** kullanabilirsiniz.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧪 Test Çalıştırma
 
-### Making a Progressive Web App
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Varsayılan olarak **React Testing Library** veya **Jest** ile testler çalıştırılabilir.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🏗️ Üretim Ortamı (Build)
 
-### Deployment
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Bu komut sonrasında proje `build/` klasöründe dağıtıma hazır hale gelir.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👩‍💻 Katkı Rehberi
+
+Katkıda bulunmak istersen:
+
+1. 🔱 Depoyu **fork** et.
+2. 🌿 Yeni bir **branch** oluştur (`feature/yeni-özellik` gibi).
+3. 💾 Değişiklikleri yap ve **commit** et.
+4. 🚀 **Pull request** gönder.
+
+---
+
+## 📄 Lisans
+
+Bu proje **MIT Lisansı** ile açık kaynaklıdır.
+
+---
+
+> 💬 *Hazırlayan:* **Şerife Akkaya**  
+> 📅 *Son güncelleme:* Kasım 2025  
+> 🌸 *React ile oluşturuldu, sevgiyle düzenlendi.*
+```
