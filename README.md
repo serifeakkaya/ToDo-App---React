@@ -1,4 +1,3 @@
-```markdown
 # 📝 React Todo App
 
 Klasik **TodoMVC** yapısına benzer, tamamen **React** ile yazılmış basit bir görev yönetim uygulamasıdır.  
